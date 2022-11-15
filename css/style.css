@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background: #dbeafe;
+
+}
+main{
+  max-width:100%;
+  border: 2px dashed red;
+  position:relative
+}
+.container {
+  font-family: sans-serif;
+  max-width:1440px;
+  /* position:absolute;
+  right:0 */
+}
+nav {
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: flex;
+  height: 89px;
+  justify-content: space-between;
+  padding: 0 75px;
+  align-items: center;
+  max-width:1440px ;
+  margin:auto;
+}
+.navbar__logo {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.navbar__list {
+  align-items: center;
+  display: flex;
+  font-size: 16px;
+  list-style: none;
+}
+.navbar__list > * {
+  cursor: pointer;
+  margin: 0 20px;
+}
+.upper-section {
+  background: #dbeafe;
+  border: 2px dashed #1d4ed8;
+  display: flex;
+  justify-content: center;
+  height: 738px;
+  margin:auto;
+  position:relative;
+}
+.upper-section__details {
+  color: #1d4ed8;
+  padding: 100px 50px;
+  width: 30rem;
+}
+.upper-section__details > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+.upper-section__details-content-heading {
+  font-size: 60px;
+  font-weight: bolder;
+  margin: 0;
+}
+.upper-section__details-content-para {
+  font-size: 16px;
+}
+.upper-section__details-content-buttons
+  .upper-section__details-content-buttons-btn:first-child {
+  background: #bfdbfe;
+  border: 1px dashed #1d4ed8;
+  border-radius: 6px;
+  color: #1d4ed8;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 18px 32px 18px 32px;
+}
+.upper-section__details-content-buttons
+  .upper-section__details-content-buttons-btn {
+  background: #dbeafe;
+  border: 1px dashed #1d4ed8;
+  border-radius: 6px;
+  color: #1d4ed8;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 18px 32px 18px 32px;
+}
+.upper-section__details-brands-subheading {
+  font-size: 14px;
+}
+.upper-section__details-brands-logos > * {
+  margin-right: 30px;
+}
+.upper-section__images {
+  min-width:50%;
+  padding: 60px 0px 40px 40px;
+  /* position: relative; */
+}
+.upper-section__images-segmentation {
+  border: 2px solid gray;
+  height: 40rem;
+  min-width:50%;
+  position:absolute;
+  right:0
+}
+.upper-section__images-segmentation-svg {
+  margin: 5px 0;
+  position:relative;
+}
+.upper-section__images-segmentation-img {
+  align-items: center;
+  background: #bfdbfe;
+  border: 2px dashed #1d4ed8;
+  display: flex;
+  height: 712px;
+  justify-content: center;
+  right: 40px;
+  left:40px;
+  position: absolute;
+  top: 35px;
+  width: 537px;
+}
+.lower-section {
+  background: #eff6ff;
+  border: 1px dashed #1d4ed8;
+  height: 89px;
+}
