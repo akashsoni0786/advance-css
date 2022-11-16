@@ -14,7 +14,7 @@ main{
   max-width:1440px
 }
 header{
-  border: 2px dashed green; 
+  border: 2px dashed #1d4ed8; 
 }
 nav {
   align-items: center;
@@ -24,7 +24,7 @@ nav {
   height: 89px;
   justify-content: space-between;
   margin:auto;
-  padding: 0 80px;
+  padding: 32px 80px;
 }
 .navbar__logo {
   font-size: 20px;
@@ -119,7 +119,8 @@ nav {
   position: absolute;
   right: 40px;
   top: 35px;
-  width: 537px;
+  max-width: 577px;
+  min-width: 537px;
 }
 .lower-section {
   background: #eff6ff;
