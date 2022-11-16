@@ -1,29 +1,30 @@
 body {
-  margin: 0;
   background: #dbeafe;
+  margin: 0;
 
 }
 main{
-  max-width:100%;
-  border: 2px dashed red;
-  position:relative
+  border: 2px dashed #1d4ed8;
+  position:relative;
+  width:100%;
 }
 .container {
   font-family: sans-serif;
-  max-width:1440px;
-  /* position:absolute;
-  right:0 */
+  margin:auto;
+  max-width:1440px
+}
+header{
+  border: 2px dashed green; 
 }
 nav {
+  align-items: center;
   background: #dbeafe;
   color: #1d4ed8;
   display: flex;
   height: 89px;
   justify-content: space-between;
-  padding: 0 75px;
-  align-items: center;
-  max-width:1440px ;
   margin:auto;
+  padding: 0 80px;
 }
 .navbar__logo {
   font-size: 20px;
@@ -38,15 +39,14 @@ nav {
 .navbar__list > * {
   cursor: pointer;
   margin: 0 20px;
+
 }
 .upper-section {
   background: #dbeafe;
-  border: 2px dashed #1d4ed8;
   display: flex;
-  justify-content: center;
   height: 738px;
+  justify-content: center;
   margin:auto;
-  position:relative;
 }
 .upper-section__details {
   color: #1d4ed8;
@@ -96,14 +96,13 @@ nav {
 .upper-section__images {
   min-width:50%;
   padding: 60px 0px 40px 40px;
-  /* position: relative; */
 }
 .upper-section__images-segmentation {
   border: 2px solid gray;
   height: 40rem;
   min-width:50%;
   position:absolute;
-  right:0
+  right:0;
 }
 .upper-section__images-segmentation-svg {
   margin: 5px 0;
@@ -116,9 +115,9 @@ nav {
   display: flex;
   height: 712px;
   justify-content: center;
-  right: 40px;
   left:40px;
   position: absolute;
+  right: 40px;
   top: 35px;
   width: 537px;
 }
