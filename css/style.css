@@ -428,6 +428,7 @@ header {
     padding: 10px;
     width: 100%;
 }
+
 .sidebar-list-of-list-item-active-list > *:not(:nth-child(3)) {
     align-items: center;
     color: #475569;
