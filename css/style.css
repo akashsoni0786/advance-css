@@ -43,6 +43,12 @@ header {
 .row {
   display: flex;
 }
+.row-f {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .row-sb {
   align-items: center;
   display: flex;
@@ -57,6 +63,13 @@ header {
   display: flex;
   flex-direction: column;
 }
+.col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .w-10 {
   width: 10%;
 }
@@ -605,13 +618,14 @@ header {
   margin-bottom: 32px;
 }
 .dashboard__sources-property {
+  height: 400px;
   margin-bottom: 32px;
+  box-sizing: border-box;
 }
-.dashboard__tables-left{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-around;
-  
+.dashboard__tables-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .dashboard__tables-left-head,
 .dashboard__tables-right-head {
@@ -682,9 +696,9 @@ header {
 .dashboard__tables-right-table-box,
 .dashboard__sources-currency-table-box,
 .dashboard__charts-current-static,
-.dashboard__charts-market-overview
-/* .dashboard__sources-property   */
-{
+.dashboard__charts-market-overview,
+.dashboard__sources-property
+/* .dashboard__common-bar-data-container */ {
   display: block;
   overflow-x: auto;
   scrollbar-width: thin;
@@ -863,13 +877,40 @@ header {
 }
 
 /* PROPERTY CHART */
-
-.circle-6 {
-  background: white;
-  border: 2px solid #fff;
+.dashboard__common-bar-data-chart {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  height: 80%;
-  width: 80%;
+}
+.circle-1 {
+  background: #3b82f6;
+  background-image: conic-gradient(#3b82f6 0deg 320deg, #f8fafc 320deg 360deg);
+  border: 5px solid #fff;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.circle-2 {
+  background-image: conic-gradient(#22c55e 0deg 290deg, #f8fafc 290deg 360deg);
+  border: 10px solid #fff;
+  border-radius: 50%;
+  height: 85%;
+  width: 85%;
+}
+.circle-3 {
+  background-image: conic-gradient(#ef4444 0deg 260deg, #f8fafc 260deg 360deg);
+  border: 10px solid #fff;
+  border-radius: 50%;
+  height: 85%;
+  width: 85%;
+}
+.circle-4 {
+  background-image: conic-gradient(#f97316 0deg 240deg, #f8fafc 240deg 360deg);
+  border: 40px white #fff;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  height: 83%;
+  width: 83%;
 }
 .circle-5 {
   background: #eab308;
@@ -877,38 +918,15 @@ header {
   border: 10px white #fff;
   border: 10px solid #fff;
   border-radius: 50%;
-  height: 70%;
-  width: 70%;
+  height: 78%;
+  width: 78%;
 }
-.circle-4 {
-  background-image: conic-gradient(#f97316 0deg 240deg, #f8fafc 240deg 360deg);
-  border: 40px white #fff;
-  border: 10px solid #fff;
+.circle-6 {
+  background: white;
+  border: 2px solid #fff;
   border-radius: 50%;
-  height: 75%;
-  width: 75%;
-}
-.circle-3 {
-  background-image: conic-gradient(#ef4444 0deg 260deg, #f8fafc 260deg 360deg);
-  border: 10px solid #fff;
-  border-radius: 50%;
-  height: 80%;
-  width: 80%;
-}
-.circle-2 {
-  background-image: conic-gradient(#22c55e 0deg 290deg, #f8fafc 290deg 360deg);
-  border: 10px solid #fff;
-  border-radius: 50%;
-  height: 80%;
-  width: 80%;
-}
-.circle-1 {
-  background: #3b82f6;
-  background-image: conic-gradient(#3b82f6 0deg 320deg, #f8fafc 320deg 360deg);
-  border: 5px solid #fff;
-  border-radius: 50%;
-  height: 80%;
-  width: 80%;
+  height: 87%;
+  width: 87%;
 }
 
 /* CURRENT STATIC CHART */
@@ -935,6 +953,27 @@ header {
   height: 100%;
   width: 100%;
   padding: 10px 10px 0 10px;
+  position: relative;
+}
+.half-circle-2::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 32px;
+  height: 10px;
+  width: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+.half-circle-2::before {
+  content: "";
+  position: absolute;
+  top: 86px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
 }
 .half-circle-3 {
   background-image: conic-gradient(
@@ -950,6 +989,27 @@ header {
   height: 100%;
   width: 100%;
   padding: 10px 10px 0 10px;
+  position: relative;
+}
+.half-circle-3::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 25px;
+  height: 10px;
+  width: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+.half-circle-3::before {
+  content: "";
+  position: absolute;
+  top: 68px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background: #22c55e;
+  border-radius: 50%;
 }
 .half-circle-4 {
   background-image: conic-gradient(
@@ -965,6 +1025,27 @@ header {
   height: 100%;
   width: 100%;
   padding: 10px 10px 0 10px;
+  position: relative;
+}
+.half-circle-4::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 19px;
+  height: 10px;
+  width: 10px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+.half-circle-4::before {
+  content: "";
+  position: absolute;
+  top: 49px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background: #ef4444;
+  border-radius: 50%;
 }
 .half-circle-5 {
   background-image: conic-gradient(
@@ -980,6 +1061,27 @@ header {
   height: 100%;
   width: 100%;
   padding: 20px 20px 0 20px;
+  position: relative;
+}
+.half-circle-5::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  height: 12px;
+  width: 12px;
+  background: #f97316;
+  border-radius: 50%;
+}
+.half-circle-5::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: -1px;
+  height: 7px;
+  width: 7px;
+  background: #f97316;
+  border-radius: 50%;
 }
 .half-circle-6 {
   background-image: conic-gradient(#fff 0deg 360deg);
@@ -991,4 +1093,27 @@ header {
   height: 100%;
   width: 100%;
   padding: 20px 20px 0 20px;
+}
+.table-data td:last-child {
+  color: #3b82f6;
+}
+.dollar {
+  width: 56px;
+  height: 56px;
+  background: #4ade80;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+ 
+}
+.inner-doller {
+  background: #4ade80;
+  border: 3px solid #ffffff;
+  border-radius: 4px;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+}
+.inner-doller-sign{
+  color:#fff !important;
+  font-size:30px !important
 }
