@@ -16,7 +16,7 @@ ul {
     padding: 0;
 }
 header {
-    border-bottom: 2px solid #93c5fd;
+    border-bottom: 2px solid #C6DDF8;
     padding: 22px;
 }
 input {
@@ -58,6 +58,11 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.row-fr{
+  align-items: center;
+  display: flex;
+  justify-content: right;
 }
 .row-fa {
   align-items: center;
